@@ -1,31 +1,31 @@
-jQuery( document ).ready(function( $ ) {
-	"use strict";
+jQuery(document).ready(function ($) {
+    "use strict";
 
-    $(function() {
-        $( "#tabs" ).tabs();
+    $(function () {
+        $("#tabs").tabs();
     });
 
     $("#preloader").animate({
         'opacity': '0'
-    }, 600, function(){
-        setTimeout(function(){
+    }, 600, function () {
+        setTimeout(function () {
             $("#preloader").css("visibility", "hidden").fadeOut();
         }, 300);
     });
-    
-    $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      var box = $('.header-text').height();
-      var header = $('header').height();
 
-      if (scroll >= box - header) {
-        $("header").addClass("background-header");
-      } else {
-        $("header").removeClass("background-header");
-      }
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        var box = $('.header-text').height();
+        var header = $('header').height();
+
+        if (scroll >= box - header) {
+            $("header").addClass("background-header");
+        } else {
+            $("header").removeClass("background-header");
+        }
     });
 
-	if ($('.owl-testimonials').length) {
+    if ($('.owl-testimonials').length) {
         $('.owl-testimonials').owlCarousel({
             loop: true,
             nav: false,
@@ -57,18 +57,22 @@ jQuery( document ).ready(function( $ ) {
     }
 
     $(".Modern-Slider").slick({
-        autoplay:true,
-        autoplaySpeed:10000,
-        speed:600,
-        slidesToShow:1,
-        slidesToScroll:1,
-        pauseOnHover:false,
-        dots:true,
-        pauseOnDotsHover:true,
-        cssEase:'linear',
-       // fade:true,
-        draggable:false,
-        prevArrow:'<button class="PrevArrow"></button>',
-        nextArrow:'<button class="NextArrow"></button>', 
+        autoplay: true,
+        autoplaySpeed: 10000,
+        speed: 600,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: false,
+        dots: true,
+        pauseOnDotsHover: true,
+        cssEase: 'linear',
+        // fade:true,
+        draggable: false,
+        prevArrow: '<button class="PrevArrow"></button>',
+        nextArrow: '<button class="NextArrow"></button>',
     });
+
 });
+
+
+

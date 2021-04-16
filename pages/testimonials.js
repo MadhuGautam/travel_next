@@ -1,22 +1,33 @@
-import React from 'react'
-//import Testimonials from '../components/Testimonials/Testimonials'
-import dynamic from 'next/dynamic'
+import Testimonials from '../components/Testimonials/Testimonials'
 
-const Testimonials = dynamic(() => import('../components/Testimonials/Testimonials'))
-export default function testimonials() {
+//import dynamic from 'next/dynamic';
+//import TestimonialLoader from '../components/Testimonials/TestimonialLoader'
+//using Loading
+//const Testimonials = dynamic(() => import('../components/Testimonials/Testimonials'), { ssr: false });
+//using Skeleton components
+//const Testimonials = dynamic(() => import('../components/Testimonials/Testimonials'), { loading: () => <TestimonialLoader /> })
+
+import PageTitleBox from './../components/PageTitleBox/PageTitleBox';
+
+const TestimonialPage = () => {
+
+    const PageTitle = [
+        {
+            id: 1,
+            heading: 'Testimonials',
+            subheading: 'testimonials from our greatest clients'
+        }
+    ];
     return (
         <>
-            <div className="page-heading header-text">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1>Testimonials</h1>
-                            <span>testimonials from our greatest clients</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {PageTitle.map((item) => (
+
+                <PageTitleBox key={item.id.toString()} {...item} />
+            ))}
+
             <Testimonials />
+
         </>
     )
 }
+export default TestimonialPage;

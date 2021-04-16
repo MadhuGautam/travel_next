@@ -1,7 +1,5 @@
-import React from 'react'
-import FooterCopyright from '../../FooterCopyright/FooterCopyright'
-
-export default function Footer() {
+import FooterCopyright from '../FooterCopyright/FooterCopyright'
+const Footer = () => {
     return (
         <>
             <footer>
@@ -70,7 +68,8 @@ export default function Footer() {
             </footer>
             <FooterCopyright />
 
-
         </>
-    )
+    );
 }
+
+export default Footer;

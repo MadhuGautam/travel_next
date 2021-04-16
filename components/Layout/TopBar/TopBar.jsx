@@ -1,16 +1,20 @@
-import React from 'react'
-
-export default function TopBar() {
+import Head from 'next/head'
+const TopBar = () => {
     return (
         <>
+
+            <Head>
+                <title>Travel NEXT</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            </Head>
             {/* Preloader Start */}
-            <div id="preloader">
+            {/* <div id="preloader">
                 <div className="jumper">
                     <div></div>
                     <div></div>
                     <div></div>
                 </div>
-            </div>
+            </div> */}
             {/* <!-- ***** Preloader End ***** --> */}
 
             {/* <!-- TopBar --> */}
@@ -35,5 +39,7 @@ export default function TopBar() {
             </div>
 
         </>
-    )
+    );
 }
+
+export default TopBar;

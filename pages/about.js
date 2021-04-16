@@ -1,10 +1,20 @@
-import React from 'react'
 import PageTitleBox from '../components/PageTitleBox/PageTitleBox'
 
-export default function About() {
+const About = props => {
+    const PageTitle = [
+        {
+            id: 1,
+            heading: 'About Us',
+            subheading: 'We have over 20 years of experience'
+        }
+    ];
     return (
         <>
-            <PageTitleBox />
+            {PageTitle.map((item) => (
+
+                <PageTitleBox key={item.id.toString()} {...item} />
+            ))}
+
             <div className="more-info about-info">
                 <div className="container">
                     <div className="row">
@@ -77,5 +87,7 @@ export default function About() {
             </div>
 
         </>
-    )
+    );
 }
+
+export default About;
